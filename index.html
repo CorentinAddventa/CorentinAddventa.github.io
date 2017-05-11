@@ -17,6 +17,16 @@
   </div>
   <div id="contentParent" class="responsive-columns-wrapper">
     <div id="chat-column-holder" class="responsive-column content-column">
+      <script>
+      var config = {
+      el: 'chat-column-holder',
+      baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
+      botID: 'efb64062-006e-432a-b0b8-ecdc1e26d779',
+      XIBMClientID: '62e62862-4c23-4aa7-ae47-6a98eeaa494e',
+      XIBMClientSecret: 'E6nA8fT7sG2nR5hS1rC0sF6tD3bO6pB2lV3yR6vU1gK8sN1vR3'
+    };
+    window.IBMChat.init(config);
+  </script>
       <div class="chat-column">
         <div id="scrollingChat"></div>
         <label for="textInput" class="inputOutline">
@@ -34,16 +44,6 @@
       <div id="payload-response" class="payload"></div>
     </div>
   </div>
-  <script>
-  var config = {
-    el: 'ibm_chat_root',
-    baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
-    botID: 'efb64062-006e-432a-b0b8-ecdc1e26d779',
-    XIBMClientID: '62e62862-4c23-4aa7-ae47-6a98eeaa494e',
-    XIBMClientSecret: 'E6nA8fT7sG2nR5hS1rC0sF6tD3bO6pB2lV3yR6vU1gK8sN1vR3'
-  };
-  window.IBMChat.init(config);
-  </script>
   <script src="js/common.js"></script>
   <script src="js/api.js"></script>
   <script src="js/conversation.js"></script>
