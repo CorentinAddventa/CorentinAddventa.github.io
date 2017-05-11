@@ -34,22 +34,22 @@
       <div id="payload-response" class="payload"></div>
     </div>
   </div>
+  <script>
+    function yesBye() {
+      var latestResponse = Api.getResponsePayload();
+      var context = latestResponse.context;
+      Api.sendRequest("yes", context);
+    }
+    function noBye() {
+      var latestResponse = Api.getResponsePayload();
+      var context = latestResponse.context;
+      Api.sendRequest("no", context);
+    }
+  </script>
   <script src="js/common.js"></script>
   <script src="js/api.js"></script>
   <script src="js/conversation.js"></script>
   <script src="js/payload.js"></script>
   <script src="js/global.js"></script>
-  <script>
-  function yesBye() {
-    var latestREsponse = Api.getResponsePayload();
-    var context = latestResponse.context;
-    Api.sendRequest("yes", context);
-  }
-    function noBye() {
-    var latestREsponse = Api.getResponsePayload();
-    var context = latestResponse.context;
-    Api.sendRequest("no", context);
-  }
-  </script>
 </body>
 </html>
