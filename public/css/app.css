@@ -47,6 +47,16 @@ div {
   height: 100%;
 }
 
+#button-gen {
+  width: 100px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 2px;
+  background-color:#20B2AA;
+  color: white;
+}
+
 #button-yes {
   width: 100px;
   margin: 5px;

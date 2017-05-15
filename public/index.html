@@ -35,15 +35,10 @@
     </div>
   </div>
   <script>
-    function yesBye() {
+    function buttonResponse(stringButton) {
       var latestResponse = Api.getResponsePayload();
       var context = latestResponse.context;
-      Api.sendRequest("yes", context);
-    }
-    function noBye() {
-      var latestResponse = Api.getResponsePayload();
-      var context = latestResponse.context;
-      Api.sendRequest("no", context);
+      Api.sendRequest(stringButton, context);
     }
   </script>
   <script src="js/common.js"></script>
