@@ -21,7 +21,7 @@ div {
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 1.5625rem;
-  background: #AB72F8;
+  background: #0E6284;
   top: 0.3125rem;
   right: 0.3125rem;
   line-height: 3.125rem;
@@ -207,7 +207,7 @@ div {
 
 .from-watson.latest.top p:before {
   content: ".";
-  color: #9855D4;
+  color: #0E6284;
   background-image: url("../img/marker_image.png");
   background-size: 0.3125rem 1.3125rem;
   position: absolute;
@@ -458,4 +458,58 @@ html{
   url('../fonts/ibm-glyphs.svg?1b8643#ibm-glyph') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+
+/* IBM CSS */
+
+.IBMChat-accent-colors {
+  background-color: #1695C8;
+  border: 1px solid #1695C8;
+  color: #ffffff;
+}
+
+.IBMChat-accent-colors-button {
+  background-color: transparent;
+  border: 1px solid #1695C8;
+  color: #1695C8;
+}
+
+.IBMChat-accent-colors-button:hover {
+  background-color: #1695C8;
+  border: 1px solid #1695C8;
+  color: #ffffff;
+}
+
+.IBMChat-accent-colors-button[disabled]:hover {
+  background-color: transparent;
+  border: 1px solid #1695C8;
+  color: #1695C8;
+}
+
+.IBMChat-watson-message-line {
+  border-left: 3px solid #1695C8;
+}
+
+a {
+  border: 0;
+  color: #BA8FF7;
+  font-weight: normal;
+  text-decoration: none;
+  font-size:1em;
+}
+
+a:hover, a:visited, a:active {
+  color: #BA8FF7;
+  font-weight: normal;
+  text-decoration: underline;
+  font-size:1em;
+}
+
+.IBMChat-chat-textbox:focus {
+  border-bottom: solid 2px #1695C8;
+}
+
+.IBMChat-ball {
+  fill: #1695C8;
 }
