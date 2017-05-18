@@ -1,46 +1,69 @@
 <html>
 <head>
-  <title>IBM Watson Virtual Agent Chat Widget Sample</title>
+  <title>Agent virtuel Addventa : Demonstration</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <style>
     body { background:#eee; }
     #ibm_chat_root { position:fixed; bottom:80; right: 20px; height: 80%; min-height:400px; width:400px; }
   </style>
+  <script src="https://ucarecdn.com/libs/widget/2.10.3/uploadcare.full.min.js" charset="utf-8"></script>
+  <script>
+    UPLOADCARE_PUBLIC_KEY = '3f1ed8bccbbc08964e6f';
+  </script>
 </head>
 <body>
   <div style="position:fixed; height:200px; right:0; left:0; top:0; background:#fff">
     <img src="img/logo-addventa.png" style="height:100%; left:20px">
   </div>
   <div style="position:fixed; height:40px; right: 20px; bottom:20; background: :#fff">
-   <input id="file" type="file" />
-   <br /><br />
-   <progress id="progress"></progress>
+    <input id="file" type="file" />
+    <script>
+      function post(path, params, method) {
+        method = method || "post";
+        var form = document.createElement("form");
+        form.setAttribute("method", method);
+        form.setAttribute("action", path);
+        for(var key in params) {
+          if(params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", key);
+            hiddenField.setAttribute("value", params[key]);
+            form.appendChild(hiddenField);
+          }
+        }
+        document.body.appendChild(form);
+        form.submit();
+      }
 
-   <script>
-     var Tesseract = require('tesseract.js')
-     var filename = 'file.tiff'
-     
-     Tesseract.recognize(filename)
-     .progress(function  (p) { console.log('progress', p)  })
-     .catch(err => console.error(err))
-     .then(function (result) {
-      console.log(result.text)
-      process.exit(0)
-    })
+      var fileInput = document.querySelector('#file');
+      fileInput.addEventListener('change', function() {
+        alert('Upload doing...');
+        var file = uploadcare.fileFrom('object', fileInput.files[0]);
+        file.done(function(fileInfo) {
+          alert('Upload done !');
+          alert(fileInfo.originalUrl);
+          post('https://api.ocr.space/parse/image', {apikey: 'dfce4a59c488957', url: fileInfo.originalUrl, language: 'fre', isOverlayRequired: 'true'});
+          alert('OCR doing...');
+        }).fail(function(error, fileInfo) {
+          alert('Upload Fail !');
+        });
+        alert('Wait a moment.');
+      }, false);
+    </script>
+  </div>
+  <div id="ibm_chat_root"></div>
+  <script src='https://unpkg.com/@watson-virtual-agent/chat-widget/dist/chat.js'></script>
+  <script>
+    var config = {
+      el: 'ibm_chat_root',
+      baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
+      botID: 'efb64062-006e-432a-b0b8-ecdc1e26d779',
+      XIBMClientID: '62e62862-4c23-4aa7-ae47-6a98eeaa494e',
+      XIBMClientSecret: 'E6nA8fT7sG2nR5hS1rC0sF6tD3bO6pB2lV3yR6vU1gK8sN1vR3'
+    };
+    window.IBMChat.init(config);
   </script>
-</div>
-<div id="ibm_chat_root"></div>
-<script src='https://unpkg.com/@watson-virtual-agent/chat-widget/dist/chat.js'></script>
-<script>
-  var config = {
-    el: 'ibm_chat_root',
-    baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
-    botID: 'efb64062-006e-432a-b0b8-ecdc1e26d779',
-    XIBMClientID: '62e62862-4c23-4aa7-ae47-6a98eeaa494e',
-    XIBMClientSecret: 'E6nA8fT7sG2nR5hS1rC0sF6tD3bO6pB2lV3yR6vU1gK8sN1vR3'
-  };
-  window.IBMChat.init(config);
-</script>
 </body>
 </html>
