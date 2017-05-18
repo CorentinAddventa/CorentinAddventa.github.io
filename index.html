@@ -28,16 +28,13 @@
           link: function(scope, element, attributes) {
             var el = angular.element(element)
             var button = el.children()[0]
-
             el.css({
               position: 'relative',
               overflow: 'hidden',
               width: button.offsetWidth,
               height: button.offsetHeight
             })
-
             var fileInput = angular.element('<input type="file" multiple />')
-
             fileInput.css({
               position: 'absolute',
               top: 0,
@@ -48,11 +45,12 @@
               opacity: '0',
               cursor: 'pointer'
             })
-            
             el.append(fileInput)
           }
         }
       })
+      
+      /*
       function post(path, params, method) {
         method = method || "post";
         var form = document.createElement("form");
@@ -85,6 +83,7 @@
         });
         alert('Please wait...');
       }, false);
+      */
     </script>
   </div>
   <div id="ibm_chat_root"></div>
