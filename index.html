@@ -23,24 +23,10 @@
   <div id="btn_div" ng-app="buttonApp">
     <div file-button style="position:relative; overflow:hidden">
       <button id="btn_overlay">Send file</button>
+      <input id="file" type="file"/>
     </div>
-    <input id="file" type="file"/>
 
     <script>
-      /*
-      var buttonApp = angular.module('buttonApp', [])
-      buttonApp.directive('fileButton', function() {
-        return {
-          link: function(scope, element, attributes) {
-            var el = angular.element(element)
-            var button = el.children()[0]
-            var fileInput = angular.element('<input type="file" multiple />')
-            el.append(fileInput)
-          }
-        }
-      })
-      */
-      
       function post(path, params, method) {
         method = method || "post";
         var form = document.createElement("form");
