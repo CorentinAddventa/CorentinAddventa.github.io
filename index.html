@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <style>
     body { background:#eee; }
-    #ibm_chat_root { position:fixed; bottom:40px; right:20px; height:80%; min-height:400px; width:400px; }
-    #upload_btn { position:fixed; height:40px; width:400px; right:20px; bottom:0px; color:#fff; background:rgb(61,61,61); }
+    #ibm_chat_root { position:fixed; bottom:60px; right:20px; height:80%; min-height:400px; width:400px; }
+    #upload_btn { position:fixed; height:60px; width:400px; right:20px; bottom:0px; padding-left:20px ;color:#fff; background:rgb(61,61,61); }
     #logo { position:fixed; height:120px; right:0; left:0; top:0; background:#fff; }
   </style>
   <script src="https://ucarecdn.com/libs/widget/2.10.3/uploadcare.full.min.js" charset="utf-8"></script>
-  <script>
-    UPLOADCARE_PUBLIC_KEY = '3f1ed8bccbbc08964e6f';
-  </script>
+  <script>UPLOADCARE_PUBLIC_KEY='3f1ed8bccbbc08964e6f';</script>
 </head>
+
 <body>
   <div id="logo">
     <img src="img/logo-addventa.png" style="height:100%; margin-left:20px">
@@ -41,17 +40,17 @@
 
       var fileInput = document.querySelector('#file');
       fileInput.addEventListener('change', function() {
-        alert('Upload doing...');
+        alert('Uploading...');
         var file = uploadcare.fileFrom('object', fileInput.files[0]);
         file.done(function(fileInfo) {
-          alert('Upload done !');
+          alert('Done !');
           alert(fileInfo.originalUrl);
           post('https://api.ocr.space/parse/image', {apikey: 'dfce4a59c488957', url: fileInfo.originalUrl, language: 'fre', isOverlayRequired: 'true'});
           alert('OCR doing...');
         }).fail(function(error, fileInfo) {
-          alert('Upload Fail !');
+          alert('Upload Failed !');
         });
-        alert('Wait a moment.');
+        alert('Please wait...');
       }, false);
     </script>
   </div>
