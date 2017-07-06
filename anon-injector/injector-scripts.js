@@ -552,9 +552,9 @@ function generateResult() {
 		{
 			action += "?transformation=" + transformation;
 		}
-		alert(action);
 		var USERNAME = "mjeudy";
 		var PASSWORD = "srEgy1Jlzf4uu2ASzfBv";
+		alert("action =" + action);
 		$.ajax(
 	   {
 		method: "POST",
