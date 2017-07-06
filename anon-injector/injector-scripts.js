@@ -545,7 +545,7 @@ function generateResult() {
 
 		xmlInput = $("#xmlInput").val();
 		var action = "https://agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
-		action += "direct/" + "AGIFundReporting-anon" + "/dialog.do";
+		action += "direct/" + project.name + "/dialog.do";
 		//var transformation = $("#" + _formId + " div#listeFieldSetDemande div#transformations input:checked").val();
 		var transformation = "html_anon";
 		if (transformation != "none")
