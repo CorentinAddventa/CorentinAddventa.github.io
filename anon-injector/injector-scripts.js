@@ -544,7 +544,7 @@ function generateResult() {
 		loadData();
 
 		xmlInput = $("#xmlInput").val();
-		var action = "https://mjeudy:srEgy1Jlzf4uu2ASzfBv@agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
+		var action = "https://agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
 		action += "direct/" + "AGIFundReporting-anon" + "/dialog.do";
 		//var transformation = $("#" + _formId + " div#listeFieldSetDemande div#transformations input:checked").val();
 		var transformation = "html_anon";
@@ -553,11 +553,15 @@ function generateResult() {
 			action += "?transformation=" + transformation;
 		}
 		alert(action);
-	
+		var USERNAME = "mjeudy";
+		var PASSWORD = "srEgy1Jlzf4uu2ASzfBv";
 		$.ajax(
 	   {
 		method: "POST",
 		url: action,
+		headers: {
+    		"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
+  		},
 		dataType: "html",
 		async: false,
 		data: {xml: xmlInput},
