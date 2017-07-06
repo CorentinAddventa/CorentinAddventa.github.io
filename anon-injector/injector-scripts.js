@@ -559,7 +559,7 @@ function generateResult() {
 		method: "POST",
 		url: action,
 		username: "mjeudy",
-		password: "srEgy1Jlzf4uu2ASzfBv"
+		password: "srEgy1Jlzf4uu2ASzfBv",
 		dataType: "html",
 		async: false,
 		data: {xml: xmlInput},
