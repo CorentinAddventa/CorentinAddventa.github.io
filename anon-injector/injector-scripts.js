@@ -552,7 +552,7 @@ function generateResult() {
 		{
 			action += "?transformation=" + transformation;
 		}
-
+		alert(action);
 	
 		$.ajax(
 	   {
