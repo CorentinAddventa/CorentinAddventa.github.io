@@ -559,9 +559,6 @@ function generateResult() {
 	   {
 		method: "POST",
 		url: action,
-		headers: {
-    		"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
-  		},
 		dataType: "html",
 		async: false,
 		data: {xml: xmlInput},
