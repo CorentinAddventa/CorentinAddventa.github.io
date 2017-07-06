@@ -544,8 +544,8 @@ function generateResult() {
 		loadData();
 
 		xmlInput = $("#xmlInput").val();
-		var action = "../../../";
-		action += "direct/" + project.name + "/dialog.do";
+		var action = "agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
+		action += "direct/" + "AGIFundReporting-anon" + "/dialog.do";
 		var transformation = $("#" + _formId + " div#listeFieldSetDemande div#transformations input:checked").val();
 		if (transformation != "none")
 		{
@@ -557,6 +557,8 @@ function generateResult() {
 	   {
 		method: "POST",
 		url: action,
+		username: "mjeudy",
+		password: "srEgy1Jlzf4uu2ASzfBv",
 		dataType: "html",
 		async: false,
 		data: {xml: xmlInput},
@@ -702,12 +704,12 @@ function submitForm()
 	resetStates();
 	
 	//Setting form attributes
-	var action = "../../../";
+	var action = "agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
 	var xmlInputName = "xml";
 	//fill in form parameters (in particular, the action field)
 	if (project.modeDirect == true)
 	{
-		action += "direct/" + project.name + "/dialog.do";
+		action += "direct/" + "AGIFundReporting-anon" + "/dialog.do";
 		var transformation = $("#" + _formId + " div#listeFieldSetDemande div#transformations input:checked").val();
 		if (transformation != "none")
 		{
