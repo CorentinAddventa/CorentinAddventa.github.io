@@ -558,18 +558,18 @@ function generateResult() {
 		$
 		.ajax({
 			url : action,
-			data : {
-			xml : xmlInput
-			},
+			/*data : {
+				xml : xmlInput
+			},*/
 			method : 'POST',
 			dataType : "html",
 			async: false,
-			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
+			// contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
 			beforeSend : function(xhr) {
 						xhr.setRequestHeader(
 						"Authorization",
 						"Basic "
-						+ btoa(USERNAME+":"+PASSWORD));
+						+ btoa(USERNAME + ":" + PASSWORD));
 			}
 		})
 		.done(function(innerHTML) {
