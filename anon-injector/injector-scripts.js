@@ -560,11 +560,16 @@ function generateResult() {
 		method: "POST",
 		url: action,
 		dataType: "html",
+		data: {
+			xml: xmlInput
+		},
 		async: false,
-		headers: {
-    		"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
-  		},
-		data: {xml: xmlInput},
+		beforeSend : function(xhr) {
+			xhr.setRequestHeader(
+			"Authorization",
+			"Basic "
+			+ btoa(USERNAME+":"+PASSWORD));
+		},
 		contentType:"application/x-www-form-urlencoded; charset=iso-8859-1"}).done(function(innerHTML) {
 
 		$("#resultContent").empty().append(innerHTML);
