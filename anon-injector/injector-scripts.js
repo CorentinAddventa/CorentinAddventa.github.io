@@ -561,6 +561,9 @@ function generateResult() {
 		url: action,
 		dataType: "html",
 		async: false,
+		headers: {
+    		"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
+  		},
 		data: {xml: xmlInput},
 		contentType:"application/x-www-form-urlencoded; charset=iso-8859-1"}).done(function(innerHTML) {
 
