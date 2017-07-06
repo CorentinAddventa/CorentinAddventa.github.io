@@ -565,11 +565,11 @@ function generateResult() {
 			dataType : "html",
 			async: false,
 			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
-			beforeSend : function(xhr) {
+			  headers: {
+    "Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
+  },
+			beforeSend : function() {
 						alert("before send");
-						xhr.setRequestHeader(
-						"Authorization",
-						"Basic " + btoa(USERNAME + ":" + PASSWORD));
 			},
 			success : function() {
 				alert("success");
