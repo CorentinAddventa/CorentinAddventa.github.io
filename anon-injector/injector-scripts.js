@@ -544,7 +544,7 @@ function generateResult() {
 		loadData();
 
 		xmlInput = $("#xmlInput").val();
-		var action = "agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
+		var action = "https://mjeudy:srEgy1Jlzf4uu2ASzfBv@agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
 		action += "direct/" + "AGIFundReporting-anon" + "/dialog.do";
 		//var transformation = $("#" + _formId + " div#listeFieldSetDemande div#transformations input:checked").val();
 		var transformation = "html_anon";
@@ -558,8 +558,6 @@ function generateResult() {
 	   {
 		method: "POST",
 		url: action,
-		username: "mjeudy",
-		password: "srEgy1Jlzf4uu2ASzfBv",
 		dataType: "html",
 		async: false,
 		data: {xml: xmlInput},
