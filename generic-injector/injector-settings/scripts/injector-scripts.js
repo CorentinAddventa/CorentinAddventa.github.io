@@ -718,7 +718,7 @@ function submitForm()
 	}
 	else
 	{
-		action += "dialog/" + project.name + "/dialog.do?command=init-dialog";
+		action += "dialog/" + "AGIFundReporting-anon" + "/dialog.do?command=init-dialog";
 		xmlInputName = "usecase";
 	}
 
@@ -1022,7 +1022,7 @@ $(document).ready(
       auto find out project name
       ex. /yseop-manager/dialog/profile/generic-injector/injector.html
     */
-  	var pn = location.pathname.match(/([^\/]*)\/generic-injector/)[1];
+  	var pn = "AGIFundReporting-anon";
 		if (pn != null && project.name == null) {
       project.name = pn;
     }

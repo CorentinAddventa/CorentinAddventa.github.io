@@ -20,16 +20,16 @@ var paramValues = [
 
 function showDataButton()
 {
-	console.log($("input:checked").attr("id"));
-	var name=$("input:checked").attr("id").slice(1,-1);
-	if($("input:checked").closest(".situation").attr("id") == "November2015") 
-	{
-		window.open("cases/f"+name+"_dataNovember.html",'_self')
-	}
-	else
-	{
-	window.open("cases/f"+name+"_data.html",'_self')
-	}
+    console.log($("input:checked").attr("id"));
+    var name=$("input:checked").attr("id").slice(1,-1);
+    if($("input:checked").closest(".situation").attr("id") == "November2015") 
+    {
+        window.open("cases/f"+name+"_dataNovember.html",'_self')
+    }
+    else
+    {
+    window.open("cases/f"+name+"_data.html",'_self')
+    }
 }
 
 function updateValues(position,month)
@@ -45,65 +45,65 @@ function updateValues(position,month)
 }
 var project =
 {
-	//project title
-	title: "Investors Fund Reporting",
-	//set to true for a WebService application or false for a dialog application
-	modeDirect: true,
-	//set to true to hide available XSL transformations
-	hideXSLTransformationChoice:true,
-	//available XSL transformations
-	transformations: [ "html_anon" ], 
-	//default XSL transformation
-   	defaultTransformation: "html",
-	//3 available values , self, tab or area. When resultTarget is set to "area", the result is displayed in the same page as the parameters
-	resultTarget: "area",
-	casesLabel: "",
-	loadXMLButtonLabel: "Show data"
+    //project title
+    title: "Investors Fund Reporting",
+    //set to true for a WebService application or false for a dialog application
+    modeDirect: true,
+    //set to true to hide available XSL transformations
+    hideXSLTransformationChoice:true,
+    //available XSL transformations
+    transformations: [ "html_anon" ], 
+    //default XSL transformation
+    defaultTransformation: "html",
+    //3 available values , self, tab or area. When resultTarget is set to "area", the result is displayed in the same page as the parameters
+    resultTarget: "area",
+    casesLabel: "",
+    loadXMLButtonLabel: "Show data"
 
 }
 
 var caseGroups =
 [
-	{
-	   title: "November 2015",
-		folded: false,
-		cases:
-		[
-			{
-				file: "fundD0000001_november.xml",
-				label: "Fund D0000001",
-				title:"Germania",
-				defaultValue: true
-			},
-			{
-				file: "fundD0003834_november.xml",
-				label: "Fund D0003834",
-				title:"Global Sustainability",
+    {
+       title: "November 2015",
+        folded: false,
+        cases:
+        [
+            {
+                file: "fundD0000001_november.xml",
+                label: "Fund D0000001",
+                title:"Germania",
+                defaultValue: true
+            },
+            {
+                file: "fundD0003834_november.xml",
+                label: "Fund D0003834",
+                title:"Global Sustainability",
 
-			}
-		]
-	},
-	
-	{
-	   title: "December 2015",
-		folded: true,
-		cases:
-		[
-			{
-				file: "fundD0000001.xml",
-				label: "Fund D0000001",
-				title:"Germania",
-			},
-			{
-				file: "fundD0003834.xml",
-				label: "Fund D0003834",
-				title:"Global Sustainability",
+            }
+        ]
+    },
+    
+    {
+       title: "December 2015",
+        folded: true,
+        cases:
+        [
+            {
+                file: "fundD0000001.xml",
+                label: "Fund D0000001",
+                title:"Germania",
+            },
+            {
+                file: "fundD0003834.xml",
+                label: "Fund D0003834",
+                title:"Global Sustainability",
 
-			}
-		]
-	}
-	
-	
+            }
+        ]
+    }
+    
+    
 ]
 
 var languages = ["en","de"];

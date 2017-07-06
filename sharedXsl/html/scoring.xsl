@@ -35,13 +35,13 @@ données structurées
 		<h3>
 			<xsl:element name="a">
 				<xsl:attribute name="name">
-					<xsl:value-of select="name(agi-fundreporting.studio.yseop-hosting.com/yseop-manager/)"/>_<xsl:value-of select="../../@num"/>_<xsl:value-of select="@libCriterion"/>
+					<xsl:value-of select="name(../../..)"/>_<xsl:value-of select="../../@num"/>_<xsl:value-of select="@libCriterion"/>
 				</xsl:attribute>
 				<xsl:value-of select="@libCriterion"/>
 ( for proposition #<xsl:value-of select="../../@num"/> )
 
 <xsl:element name="a">
-					<xsl:attribute name="href">#<xsl:value-of select="name(agi-fundreporting.studio.yseop-hosting.com/yseop-manager)"/>_<xsl:value-of select="../../@num"/>
+					<xsl:attribute name="href">#<xsl:value-of select="name(../../..)"/>_<xsl:value-of select="../../@num"/>
 					</xsl:attribute>
 Back
 </xsl:element>
@@ -142,7 +142,7 @@ résumé
 				<tr>
 					<td>
 						<xsl:element name="a">
-							<xsl:attribute name="href">#<xsl:value-of select="name(agi-fundreporting.studio.yseop-hosting.com/yseop-manager)"/>_<xsl:value-of select="../../@num"/>_<xsl:value-of select="@libCriterion"/>
+							<xsl:attribute name="href">#<xsl:value-of select="name(../../..)"/>_<xsl:value-of select="../../@num"/>_<xsl:value-of select="@libCriterion"/>
 							</xsl:attribute>
 							<xsl:value-of select="@libCriterion"/>
 						</xsl:element>

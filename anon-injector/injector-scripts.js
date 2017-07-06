@@ -564,7 +564,7 @@ function generateResult() {
 		async: false,
 		data: {xml: xmlInput},
 		contentType:"application/x-www-form-urlencoded; charset=iso-8859-1"}).done(function(innerHTML) {
-	
+
 		$("#resultContent").empty().append(innerHTML);
 		$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
 		
@@ -1024,7 +1024,7 @@ $(document).ready(
       auto find out project name
       ex. /yseop-manager/dialog/profile/generic-injector/injector.html
     */
-  	var pn = location.pathname.match(/([^\/]*)\/anon-injector/)[1];
+  	var pn = "AGIFundReporting-anon";
 		if (pn != null && project.name == null) {
       project.name ="AGIFundReporting-anon";
     }
