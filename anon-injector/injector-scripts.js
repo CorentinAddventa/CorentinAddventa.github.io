@@ -555,8 +555,8 @@ function generateResult() {
 		var USERNAME = "mjeudy";
 		var PASSWORD = "srEgy1Jlzf4uu2ASzfBv";
 		alert("action =" + action);
-		$.ajax(
-	   {
+		$
+		.ajax({
 		method: "POST",
 		url: action,
 		dataType: "html",
