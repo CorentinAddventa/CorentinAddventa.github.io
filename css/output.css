@@ -1,0 +1,158 @@
+
+#refreshButton {
+	text-align: center;	
+	margin-bottom : 10px;
+	float:right;
+	
+}
+
+#refreshButton input {
+	font-size:10pt;
+	padding:8px;
+	background-color: rgba(51,165,255,0.9);
+}
+
+#refreshButton input:hover {
+	background-color: rgba(51,165,255,1);
+}
+
+#reportContainer {
+    width:90%;
+    margin:auto;
+}
+
+.left {
+    width:13%;
+    display:inline-block;
+    margin-right:1.5%;
+    vertical-align:top;
+    margin-top:30px;
+}
+
+.right{
+    width:84.5%;
+    display:inline-block;
+    vertical-align:top;
+     margin-top:30px;
+}
+
+#reportHeader .right{
+    height: 300px;
+    background: #003781;
+    color:#FFFFFF;
+    position: relative;
+     margin-top:0px;
+}
+
+#reportHeader .right:before {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    border-bottom: 80px solid white;
+    border-left: 80px solid #003781;
+    width: 0;
+}
+
+#reportTitle {
+    font-size:3em;
+    margin-left:60px;
+}
+
+#reportDate {
+    position:absolute;
+    bottom:20pt;
+    left:60px;
+    font-size:1.2em;
+    
+}
+#reportHeader .left {
+     height: 30px;
+    width:12%;
+    padding:220px 0 50px 1%;
+    background: #003781;
+    color:#FFFFFF;
+    font-size:1.2em;
+    margin-top:0px;
+    font-family:'allianz_sanslight';
+}
+
+.sectionTitle {
+     color: #003781;
+}
+
+#footer {
+    
+    background:#E9E8E7;
+   padding:40pt 55% 25pt 5%;
+   margin-top:100pt;
+   position:relative;
+   text-transform: uppercase;
+   color:red;
+    font-family: 'allianz_sansbold';
+    font-size:1.4em;
+}
+
+#logoFooter {
+    position:absolute;
+    top:-45pt;
+    right:5%;
+}
+#logoFooter img{
+    width:280px;
+}
+#resultContent {
+    
+    padding-left:0;
+    padding-right:0;
+    padding-bottom:0;
+}
+
+.left img {
+    width:100%;
+}
+
+#summaryTitle {
+    
+    background:#6683B7;
+    color:#ffffff;
+    padding:7pt 0 1pt 10pt;
+    font-size:1.3em;
+    margin:0 0 5pt 0;
+}
+
+#summaryContent {
+    
+    background:#CCD6E7;
+    margin:0;
+    padding:10pt;
+}
+
+@media screen and (max-width: 1200px){
+  #reportContainer {
+      font-size:0.9em;
+  }
+  
+  #reportHeader .left {
+      width:16%;
+       font-size:1em;
+  }
+  
+   #reportHeader .right {
+     width:80.5%;
+  }
+  .left {
+    width:17%;
+    display:inline-block;
+    margin-right:1.5%;
+    vertical-align:top;
+    margin-top:30px;
+}
+
+.right{
+    width:80.5%;
+    display:inline-block;
+    vertical-align:top;
+     margin-top:30px;
+}
+
+}

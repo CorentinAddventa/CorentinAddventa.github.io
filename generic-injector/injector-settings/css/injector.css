@@ -1,0 +1,110 @@
+body
+{
+	font-family:"Arial", arial,sans-serif;
+	font-size: 10pt;
+}
+
+/*
+h1 {
+	text-transform: uppercase;
+	border: 0px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: #F0F0F0;
+	font-size: 18pt;
+	padding-left: 10px;
+}*/
+
+#dasForm {
+	margin-top: 40px;
+}
+
+#properties ul {
+	margin: 0px;
+	list-style-type: none;
+	padding: 0px;
+}
+
+#listeFieldSetDemande {
+	overflow: auto;
+	max-height: 30em;
+}
+
+#listeFieldSetDemande > div > h4 > *, .notification * {
+	display: inline-block;
+}
+
+.button *{
+	display: inline-block;
+}
+
+.button {
+	text-decoration: none;
+	display:inline-block;
+	padding: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#xml ul li {
+	display: inline;
+}
+
+#xml ul{
+	background:#ffffff;
+	min-height:350pt;
+	margin-bottom:30pt;
+}
+
+#description {
+	width: 47%;
+	height: 320px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	resize: none;
+	font-size: 8pt;
+	margin: 0px 0px 0px 10px;
+	padding: 5px;
+}
+
+#properties > ul > li {
+	display: inline-block;
+}
+
+#logoContainer {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+#logo {
+	background-image: url(../images/logo_yseop.png);
+	width: 180px;
+	height: 35px;
+	background-repeat: no-repeat;
+}
+
+label.error {
+	background:url("injector-settings/images/unchecked.gif") no-repeat 0px 0px;
+	padding-left: 16px;
+	padding-bottom: 2px;
+	margin-left: 10px;
+	font-weight: bold;
+	color: #EA5200;
+}
+
+label.valid {
+	background:url("injector-settings/images/checked.gif") no-repeat 0px 0px;
+	color: blue;
+	margin-left: 10px;
+}
+
+.disabled {
+	font-style: italic;
+}
+
+strike {
+	text-decoration : none;
+	color : #A3A3A3;
+}

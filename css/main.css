@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'allianz_sansbold';
+    src: url('fonts/alsanbol-webfont.eot');
+    src: url('fonts/alsanbol-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alsanbol-webfont.woff2') format('woff2'),
+         url('fonts/alsanbol-webfont.woff') format('woff'),
+         url('fonts/alsanbol-webfont.ttf') format('truetype'),
+         url('fonts/alsanbol-webfont.svg#allianz_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'allianz_sansregular';
+    src: url('fonts/alsanreg-webfont.eot');
+    src: url('fonts/alsanreg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alsanreg-webfont.woff2') format('woff2'),
+         url('fonts/alsanreg-webfont.woff') format('woff'),
+         url('fonts/alsanreg-webfont.ttf') format('truetype'),
+         url('fonts/alsanreg-webfont.svg#allianz_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'allianz_seriflight';
+    src: url('fonts/alserlig-webfont.eot');
+    src: url('fonts/alserlig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alserlig-webfont.woff2') format('woff2'),
+         url('fonts/alserlig-webfont.woff') format('woff'),
+         url('fonts/alserlig-webfont.ttf') format('truetype'),
+         url('fonts/alserlig-webfont.svg#allianz_seriflight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'allianz_sanslight';
+    src: url('fonts/alsanlig-webfont.eot');
+    src: url('fonts/alsanlig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alsanlig-webfont.woff2') format('woff2'),
+         url('fonts/alsanlig-webfont.woff') format('woff'),
+         url('fonts/alsanlig-webfont.ttf') format('truetype'),
+         url('fonts/alsanlig-webfont.svg#allianz_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    
+    background:#AFB0B1;
+    font-family:'allianz_sansregular';
+    margin:0;
+}
+
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family:'allianz_sansregular';
+}
+
+#result {
+     font-family:'allianz_sansregular';
+     font-size:13pt;
+     margin-top:100pt;
+     width:78%;
+}
+
+#resultContent {
+    border-radius: 0;
+}
+
+#properties {
+    height: auto;
+    left:15pt;
+    top:103pt;
+    background:whitesmoke;
+    color:#4D4D4D;
+    font-family:'allianz_sansregular';
+    padding-top:5pt;
+    padding-bottom:20pt;
+    width:300px;
+    position:absolute;
+}
+
+#propertiesButtons {
+    padding-top: 0;
+}
+/*
+#propertiesItems ul {
+    width:60%;
+}
+*/
+
+#properties h4 a {
+    color:#4D4D4D;
+    font-family:'allianz_sansregular';
+    font-size:14pt;
+}
+
+#cases h4 {
+    display:none;
+}
+#listeFieldSetDemande {
+    background:none;
+}
+#titleResult, 
+.byYseop,
+#xmlLink,
+.ps-scrollbar-y,
+.ps-scrollbar-y-rail{
+    display: none;
+}
+
+#logoContainer {
+    top:23pt;
+    left:5pt;
+    z-index:110;
+    position:fixed;
+}
+#logo {
+    background:url("../images/agi_l_blue_web.gif");
+    width:179px;
+    height:74px;
+    
+}
+
+#pwdByYseop {
+    background: transparent url("../images/pwd_by_yseop.png") no-repeat scroll 0% 0%;
+    width:200px;
+    height:60px;
+    position:fixed;
+    top:15pt;
+    right:50pt;
+    z-index:115;
+}
+
+#header {
+    background:#FFFFFF;
+    height:50pt;
+    padding-bottom:0pt;
+    position:fixed;
+    top:0;
+    border-bottom: 43pt solid #AFB0B1;
+    z-index: 100;
+    padding: 10pt 0 10pt 2%;
+    width: 98%;
+    margin-top: 0;
+}
+
+#header h2 {
+    font-family: 'allianz_sansbold';
+    color:#003781;
+    margin-top:0pt;
+}
+
+#languages {
+    top:70pt;
+    position:fixed;
+    z-index:110;
+}
+
+.casesContainer .button{
+    
+    border-radius: 0pt;
+    background: #003781;
+    width:80%;
+    white-space:normal;
+    margin-bottom:3pt;
+}
+
+
+#properties .casesContainer ul{
+    width:100%;
+}
+
+
+.casesContainer ul li {
+    position:relative;
+    background: #003781;
+    width:90%;
+    display:inline-block;
+   margin: 0 10pt 10pt 10pt;
+    padding:0;
+    
+}
+
+
+.casesContainer ul li:before{
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    border-bottom: 10px solid white;
+    border-left: 10px solid #003781;
+    width: 0;
+}
+
+
+
+.ui-widget-content {
+    border: 1px solid #DDD;
+    background: #CCC repeat-x scroll 50% top;
+    color: #333;
+}
+
+.sliderValue {
+    background: #009CA6;
+    margin-left: 5pt;
+    color: #ffffff;
+    border-radius:10pt;
+    border: medium none;
+    width: 40px;
+    height:30px;
+    text-align:center;
+    right: 10pt;
+    position: absolute;
+}
+
+.ui-slider {
+    height: 6pt;
+    margin-top: 3pt;
+    margin-left: 0;
+    margin-bottom:20pt;
+    width: 150px;
+}
+
+
+#properties label {
+    color: #4D4D4D;
+}
+.casesContainer ul li.selected,
+.casesContainer .button.selected {
+    background:#009CA6;    
+}
+
+.casesContainer ul li.selected:before{
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    border-bottom: 10px solid white;
+    border-left: 10px solid #009CA6;
+    width: 0;
+}
+
+#listeFieldSetDemande {
+    max-height:none;
+}
+#listeFieldSetDemande .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #003781 none repeat scroll 0% 0%;
+}
+
+#buildAndLaunch {
+   border-radius:0;
+    padding: 6pt;
+
+    background:rgb(0,122,83);
+}
+
+#buildAndLaunch:hover {
+    background:rgba(0,122,83,0.8);
+}
+
+#buildXML {
+   border-radius:0;
+    padding: 6pt;
+    background:rgb(135,24,157);
+}
+
+#buildXML:hover {
+    background:rgba(135,24,157,0.8);
+}
+
+.situation h5 {
+    color: #4D4D4D; 
+}
+
+
+@media screen and (max-width: 1200px){
+  #result {
+      width:70%;
+  }
+}
+
+.ui-slider.ui-state-disabled .ui-slider-handle {
+    cursor: default;
+}
+
+

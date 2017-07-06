@@ -1,0 +1,336 @@
+body {
+	padding:0;
+	margin:0;
+	font-family:Raleway;
+	background:#FEFEFE;
+}
+
+#header {
+	padding:10pt 0 10pt 2%;
+	width:98%;
+	margin-top:0;
+	height:110pt;
+	background:url(../images/bg_contact.png);
+	background-size:cover;
+}
+
+#header h2 {
+	font-weight:normal;
+	font-size:24pt;
+	margin-left: 290px;
+	margin-top:30pt;
+	color:whitesmoke;
+}
+
+#tabs {
+	border:none;
+	padding-left:20pt;
+}
+
+#tabs>ul:first-child {
+	display:none;
+}
+
+
+#logoContainer {
+	position:absolute;
+	left:0;
+	top:110pt;
+	width:100%;
+	height:45pt;
+	background-color:#555555;
+	color:whitesmoke;
+	box-shadow:0px 2px 2px #333333 inset;
+}
+.byYseop {
+	padding-top:7pt;
+	padding-left:10pt;
+	font-size:11pt;
+
+}
+#logo {
+	background:url(../images/logo_white.png);
+	background-repeat:no-repeat;
+	width:50px;
+	height:45px;
+	margin-top:7pt;
+	float:left;
+	margin-left:10pt;
+	margin-right:15pt;
+}
+
+#languages {
+	position:absolute;
+	top:-42pt;
+	right:20pt;
+	z-index:1000;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+	font-family: Raleway;
+}
+
+.button {
+	border-radius:8pt;
+	border:none;
+	background-color:rgba(51,165,255,0.6);
+	color:whitesmoke;
+	cursor: pointer;
+	display:inline-block;
+	outline:none;
+	padding:8pt;
+	margin-bottom:10pt;
+}
+
+.selected {
+	background-color:rgb(51,165,255);
+}
+.button:hover {
+		background-color:rgb(51,165,255);
+
+}
+
+#languages .button {
+	border-radius:5pt;
+	text-transform:uppercase;
+}
+
+#listeFieldSetDemande {
+	overflow:hidden;
+	max-height:none;
+	width:100%;
+	padding-bottom:20pt;
+	background:none;
+}
+
+#propertiesItem {
+	width:100%;
+	background:none;
+	max-height:500px;
+}
+
+#properties, #xml {
+	font-family:Raleway;
+}
+
+#properties h2, #xml h2 {
+	background: rgb(51,161,255);
+	
+}
+
+#properties h2 a, #xml h2 a {
+	color: whitesmoke;
+}
+
+#buildAndLaunch, #launch{
+	background: rgba(51,165,255,0.9);
+	border: none;
+	padding:10pt;
+	color:whitesmoke;
+}
+
+#buildXML {
+	border: none;
+	padding:10pt;
+	color:whitesmoke;
+	background: rgba(0,0,0,0.4);
+}
+#buildXML:hover {
+	background: rgba(0,0,0,0.5);
+}
+#buildAndLaunch:hover,
+#launch:hover,
+
+ {
+	background: rgba(51,165,255,1);
+	color:#ffffff;
+	
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	border:none;
+	outline: none;
+
+}
+
+
+
+#properties ul, #xml ul {
+	background:#ffffff;
+
+}
+
+#propertiesItems{
+	width:100%;
+}
+
+#listeFieldSetDemande .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid #77d5f7;
+  background: rgb(51,165,255);
+  outline:none;
+  border:none;
+  font-weight: normal;
+  color: #ffffff;
+	
+}
+
+#xml .ui-icon ,
+#propertiesButtons .ui-icon,
+#properties h2 .ui-icon,
+#xml h2 .ui-icon  {
+	background-image: url(cupertino/images/ui-icons_ffffff_256x240.png);
+}
+
+.ui-slider .ui-slider-handle {
+	  border-radius:8pt;
+	  cursor:pointer;
+}
+.ui-slider {
+	height:6pt;
+	margin-top:10pt;
+	margin-left:10pt;
+	width:200px;
+	
+	background:#aaaaaa;
+	
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+
+.sliderValue {
+	background:none;
+	margin-left:5pt;
+	border:none;
+	width:30px;
+	color:#666666;
+	font-family:Raleway;
+}
+
+#listeFieldSetDemande div {
+	display:inline-block;
+	width:30%;
+	vertical-align:top;
+}
+
+#listeFieldSetDemande h4 {
+	font-weight:500;
+	
+	
+}
+
+#listeFieldSetDemande h4 a {
+	text-decoration: none;
+	color:rgb(51,161,255);
+}
+
+#properties .text .ui-spinner-button {
+	background:none;
+	cursor:pointer;
+}
+
+#properties .text .ui-spinner-input {
+	outline:none;
+	border:none;
+}
+
+#properties .text .ui-spinner {
+	margin-top: 5pt;
+}
+
+* {
+	-webkit-box-sizing: initial;
+	box-sizing: initial;
+}
+
+#transformations label,
+#cases label, .radio label, .checkbox label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+	margin-bottom:10pt;
+    font-size: 11pt;
+}
+
+input[type=radio],input[type=checkbox] {
+    display: none;
+}
+#transformations label:before,
+#cases label:before,
+.radio label:before,
+.checkbox label:before  {
+    content: "";
+    display: inline-block;
+ 
+    width: 18px;
+    height: 18px;
+ 
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #aaa;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+#transformations label:before,
+#cases label:before,
+.radio label:before {
+    border-radius: 12px;
+}
+
+.checkbox label:before {
+    border-radius: 4px;
+}
+#transformations input[type=radio]:checked + label:before,
+#cases input[type=radio]:checked + label:before,
+input[type=radio]:checked + label:before
+ {
+    content: "\2022";
+    color: #f3f3f3;
+    font-size: 40px;
+	font-weight:bold;
+    text-align: center;
+    line-height: 18px;
+}
+
+
+input[type=checkbox]:checked + label:before
+ {
+    content: "\2713";
+    color: #f3f3f3;
+    font-size: 25px;
+
+    text-align: center;
+    line-height: 15px;
+}
+
+
+#tabs {
+	background:none;
+}
+
+select {
+	border-radius:4pt;
+	outline:none;
+
+	padding:2pt;
+	color:#333333;
+	margin-left:10pt;
+}
+
+#xmlLink {
+  position: absolute;
+  z-index: 10000;
+  left: 180pt;
+  height: 20pt;
+  top: 100pt;
+  background: #5E5E5E;
+  padding: 17pt 15pt 8pt 15pt;
+  box-shadow: 0px 2px 2px #333333 inset;	
+}
+
+#xmlLink a {
+	color:rgb(51,161,255);
+	font-size:11pt;
+	
+}
