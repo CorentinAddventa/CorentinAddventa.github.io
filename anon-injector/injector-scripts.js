@@ -544,7 +544,7 @@ function generateResult() {
 		loadData();
 
 		xmlInput = $("#xmlInput").val();
-		var action = "https://agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
+		var action = "../../../";
 		action += "direct/" + project.name + "/dialog.do";
 		//var transformation = $("#" + _formId + " div#listeFieldSetDemande div#transformations input:checked").val();
 		var transformation = "html_anon";
@@ -705,12 +705,12 @@ function submitForm()
 	resetStates();
 	
 	//Setting form attributes
-	var action = "https://agi-fundreporting.studio.yseop-hosting.com/yseop-manager/";
+	var action = "../../../";
 	var xmlInputName = "xml";
 	//fill in form parameters (in particular, the action field)
 	if (project.modeDirect == true)
 	{
-		action += "direct/" + "AGIFundReporting-anon" + "/dialog.do";
+		action += "direct/" + project.name + "/dialog.do";
 		var transformation = $("#" + _formId + " div#listeFieldSetDemande div#transformations input:checked").val();
 		if (transformation != "none")
 		{
@@ -719,7 +719,7 @@ function submitForm()
 	}
 	else
 	{
-		action += "dialog/" + "AGIFundReporting-anon" + "/dialog.do?command=init-dialog";
+		action += "dialog/" + project.name + "/dialog.do?command=init-dialog";
 		xmlInputName = "usecase";
 	}
 
@@ -1026,7 +1026,7 @@ $(document).ready(
     */
   	var pn = location.pathname.match(/([^\/]*)\/anon-injector/)[1];
 		if (pn != null && project.name == null) {
-      project.name = "AGIFundReporting-anon";
+      project.name = pn;
     }
     
 		
