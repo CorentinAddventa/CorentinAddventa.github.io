@@ -557,26 +557,25 @@ function generateResult() {
 		alert("action =" + action);
 		$
 		.ajax({
-		method: "POST",
-		url: action,
-		dataType: "html",
-		data: {
-			xml: xmlInput
-		},
-		async: false,
-		beforeSend : function(xhr) {
-			xhr.setRequestHeader(
-			"Authorization",
-			"Basic "
-			+ btoa(USERNAME+":"+PASSWORD));
-		},
-		contentType:"application/x-www-form-urlencoded; charset=iso-8859-1"}).done(function(innerHTML) {
-
-		$("#resultContent").empty().append(innerHTML);
-		$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
-		
-		$("#xml").hide();
-		
+			url : action,
+			data : {
+			xml : xmlInput
+			},
+			method : 'POST',
+			dataType : "html",
+			async: false,
+			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
+			beforeSend : function(xhr) {
+						xhr.setRequestHeader(
+						"Authorization",
+						"Basic "
+						+ btoa(USERNAME+":"+PASSWORD));
+			}
+		})
+		.done(function(innerHTML) {
+			$("#resultContent").empty().append(innerHTML);
+			$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
+			$("#xml").hide();
 	});	
 		
 }
