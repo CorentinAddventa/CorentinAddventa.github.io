@@ -566,10 +566,16 @@ function generateResult() {
 			async: false,
 			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
 			beforeSend : function(xhr) {
+						alert("before send");
 						xhr.setRequestHeader(
 						"Authorization",
-						"Basic "
-						+ btoa(USERNAME + ":" + PASSWORD));
+						"Basic " + btoa(USERNAME + ":" + PASSWORD));
+			},
+			success : function() {
+				alert("success");
+			},
+			error : function() {
+				alert("error");
 			}
 		})
 		.done(function(innerHTML) {
