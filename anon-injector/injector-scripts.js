@@ -563,9 +563,6 @@ function generateResult() {
 			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
 			data : { 'xml' : xmlInput },
 			headers: "Authorization: Basic bWpldWR5OnNyRWd5MUpsemY0dXUyQVN6ZkJ2",
-			beforeSend : function(xhr) {
-				alert("BEFORE SEND");
-			},
 			success : function(innerHTML) {
 				alert("SUCCES");
 				$("#resultContent").empty().append(innerHTML);
