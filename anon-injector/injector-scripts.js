@@ -562,7 +562,7 @@ function generateResult() {
 			async: false,
 			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
 			data : { 'xml' : xmlInput },
-			headers: "Authorization: Basic bWpldWR5OnNyRWd5MUpsemY0dXUyQVN6ZkJ2",
+			headers: "Authorization: Basic qrgqer",
 			success : function(innerHTML) {
 				alert("SUCCES");
 				$("#resultContent").empty().append(innerHTML);
