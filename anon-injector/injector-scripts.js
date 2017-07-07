@@ -561,6 +561,7 @@ function generateResult() {
 			dataType : "html",
 			async: false,
 			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
+			data : { 'xml' : xmlInput },
 			beforeSend : function(xhr) {
 				alert("BEFORE SEND");
 				alert(USERNAME+" : "+PASSWORD),
