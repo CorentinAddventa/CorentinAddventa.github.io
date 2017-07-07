@@ -560,6 +560,7 @@ function generateResult() {
   			method : 'POST',
 			dataType : "html",
 			async: false,
+			crossDomain: true,
 			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
 			data : { 'xml' : xmlInput },
 			beforeSend : function(xhr) {
