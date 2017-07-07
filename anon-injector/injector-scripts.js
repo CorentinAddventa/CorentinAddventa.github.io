@@ -559,7 +559,7 @@ function generateResult() {
 			url : action,
 			headers: {
     			"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
-  			}
+  			},
   			method : 'POST',
 			dataType : "html",
 			async: false,
