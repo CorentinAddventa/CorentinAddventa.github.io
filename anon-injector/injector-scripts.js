@@ -554,19 +554,16 @@ function generateResult() {
 		}
 		var USERNAME = "mjeudy";
 		var PASSWORD = "srEgy1Jlzf4uu2ASzfBv";
-		var request = new FormData();
-		request.append('xml', xmlInput);
-		alert(xmlInput);
 		$
 		.ajax({
 			url : action,
-			data : request,
-			type : 'POST',
-			dataType : "html",
-			processData : false,
-			contentType : false,
+			data : {
+				xml : "salut"
+			},
+			method : 'POST',
+			dataType : "xml",
 			async: false,
-			//contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
+			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
 			beforeSend : function(xhr) {
 						alert("before send");
 						xhr.setRequestHeader(
