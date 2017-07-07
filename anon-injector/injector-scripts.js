@@ -557,35 +557,28 @@ function generateResult() {
 		$
 		.ajax({
 			url : action,
-			headers: {
-    			"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
-  			},
   			method : 'POST',
 			dataType : "html",
 			async: false,
-			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1"
-  		});
-
-		$
-		.ajax({
-			url : action,
-			headers: {
-    			"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
-  			},
-			data : {
-				xml : xmlInput
+			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1";
+			beforeSend : function(xhr) {
+				alert("BEFORE SEND");
+				alert(USERNAME+" : "+PASSWORD),
+				xhr.setRequestHeader(
+								"Authorization",
+								"Basic "
+										+ btoa(USERNAME+":"+PASSWORD));
 			},
-			method : 'POST',
-			dataType : "html",
-			async: false,
-			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1"}
-		).done(function(innerHTML) {
-			alert("done");
-			$("#resultContent").empty().append(innerHTML);
-			$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
-			$("#xml").hide();
-	});	
-		
+			success : function(innerHTML) {
+				alert("SUCCES");
+				$("#resultContent").empty().append(innerHTML);
+				$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
+				$("#xml").hide();
+			},
+			error : function() {
+				alert("ERROR");
+			}
+  		});		
 }
 
 function buildFormSamePage()
