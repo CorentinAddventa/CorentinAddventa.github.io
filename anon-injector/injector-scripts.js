@@ -566,17 +566,14 @@ function generateResult() {
 			headers: {
     			"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
   			},
-			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
-			success : function() {
-				alert("success");
-				$("#resultContent").empty().append(innerHTML);
-				$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
-				$("#xml").hide();
-			},
-			error : function() {
-				alert("error");
-			}
-		});	
+			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",}).done(function(innerHTML) {
+		alert("done");
+		$("#resultContent").empty().append(innerHTML);
+		$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
+		
+		$("#xml").hide();
+		
+	});	
 		
 }
 
