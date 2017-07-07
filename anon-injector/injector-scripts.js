@@ -569,6 +569,9 @@ function generateResult() {
 		$
 		.ajax({
 			url : action,
+			headers: {
+    			"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
+  			},
 			data : {
 				xml : xmlInput
 			},
