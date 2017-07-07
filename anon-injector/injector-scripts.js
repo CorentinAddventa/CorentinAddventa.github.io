@@ -563,7 +563,7 @@ function generateResult() {
 			method : 'POST',
 			dataType : "html",
 			async: false,
-			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",}).done(function(innerHTML) {
+			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1"}).done(function(innerHTML) {
 		alert("done");
 		$("#resultContent").empty().append(innerHTML);
 		$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
