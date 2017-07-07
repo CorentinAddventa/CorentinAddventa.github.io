@@ -558,7 +558,7 @@ function generateResult() {
 		.ajax({
 			url : action,
 			data : {
-				xml : "xmlInput"
+				xml : xmlInput
 			},
 			method : 'POST',
 			dataType : "html",
