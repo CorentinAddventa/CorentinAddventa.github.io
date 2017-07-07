@@ -558,18 +558,15 @@ function generateResult() {
 		.ajax({
 			url : action,
 			data : {
-				xml : "salut"
+				xml : "xmlInput"
 			},
 			method : 'POST',
-			dataType : "xml",
+			dataType : "html",
 			async: false,
+			headers: {
+    			"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
+  			},
 			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
-			beforeSend : function(xhr) {
-						alert("before send");
-						xhr.setRequestHeader(
-						"Authorization",
-						"Basic " + btoa(USERNAME + ":" + PASSWORD));
-			},
 			success : function() {
 				alert("success");
 				$("#resultContent").empty().append(innerHTML);
