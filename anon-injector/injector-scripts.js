@@ -560,7 +560,7 @@ function generateResult() {
   			method : 'POST',
 			dataType : "html",
 			async: false,
-			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1";
+			contentType : "application/x-www-form-urlencoded; charset=iso-8859-1",
 			beforeSend : function(xhr) {
 				alert("BEFORE SEND");
 				alert(USERNAME+" : "+PASSWORD),
