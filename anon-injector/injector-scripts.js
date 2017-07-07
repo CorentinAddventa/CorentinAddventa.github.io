@@ -554,7 +554,7 @@ function generateResult() {
 		}
 		var USERNAME = "mjeudy";
 		var PASSWORD = "srEgy1Jlzf4uu2ASzfBv";
-		alert("action =" + action);
+		alert(xmlInput);
 		$
 		.ajax({
 			url : action,
@@ -573,16 +573,14 @@ function generateResult() {
 			},
 			success : function() {
 				alert("success");
+				$("#resultContent").empty().append(innerHTML);
+				$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
+				$("#xml").hide();
 			},
 			error : function() {
 				alert("error");
 			}
-		})
-		.done(function(innerHTML) {
-			$("#resultContent").empty().append(innerHTML);
-			$("#titleResult").html($("#" + _formId + " div#listeFieldSetDemande div#cases .selected").val());
-			$("#xml").hide();
-	});	
+		});	
 		
 }
 
